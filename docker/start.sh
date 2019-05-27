@@ -17,5 +17,5 @@ then
     /usr/bin/docker stop "$word"
     /usr/bin/docker rm "$word"
 fi
-/usr/local/maven-3.6.0/bin/mvn clean package -P demo docker:build
+/usr/local/maven-3.6.0/bin/mvn clean package docker:build
 /usr/bin/docker run -p 8761:8761 -d --name "$appName" "$appName":latest
